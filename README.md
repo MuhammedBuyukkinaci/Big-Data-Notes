@@ -57,6 +57,73 @@ Data Generation Speed * Number of Engines * Total second of flight
 
 ![NoSQL](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/001/003.jpeg)
 
+## Hadoop
+
+1) Hadoop is a java library which enables us to make parallel operations of big data(PB, EB) on multiple machines 
+
+2) Hadoop composes of 4 components:
+
+- Hadoop Common: Necessary for Apache Hive & Apache Pig It gives access them to access HDFS.
+
+- HDFS: Hadoop distributed file system
+
+- Hadoop YARN: It manages CPU, RAM and disk usage of MapReduce applications.
+
+- Hadoop MapReduce: Tools to process data which is on HDFS.
+
+
+3) HDFS can be examplified as follows:
+
+![HDFS](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/002/000.png)
+
+4) MapReduce can be visualized as follows:
+
+![HDFS](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/002/001.png)
+
+5) Hadoop has 3 modes in installation.
+
+- Standalone mode: Used for debugging and testing
+
+- Single Node Cluster: Replication factor = 1. Master and slave are the same.
+
+- Multiple Node Cluster: Replication factor > 1, 1 master and others are slave. Hadoop should be installed in each machine and the network should be configured.
+
+6) Cloudera is a platform in which hadoop, apache pig, apache hive, apache spark are installed. Install vmbox and install cloudera as an operating system.
+
+7) Some hdfs commands on terminal of Hadoop is below:
+
+```
+# To create a directory on HDFS
+hdfs dfs -mkdir /example
+
+# To transfer a file to HDFS
+hdfs dfs -copyFromLocal /path/of/file/in/local /target/directory/on/hdfs
+
+# To see the number of files in a hdfs directory
+hdfs dfs -count /example
+
+# To see the content of a file in HDFS
+hdfs dfs -cat /example/ratings.csv
+
+# To copy a file in HDFS
+hdfs dfs -copy /example/ratings.csv /var
+
+# To delete a file
+hdfs dfs -rm /example/ratings.csv
+
+# To move a file to another directory
+hdfs dfs -rm /example/ratings.csv /var
+
+# To list files in usr folder
+hdfs dfs -ls /us
+
+# To change permissions of a file
+hdfs dfs -chmod +x runall.sh
+
+# To set replication factor of HDFS(should be used in a cluster where a master and slaves exist)
+hdfs dfs -setrep 4 -R /example/ratings.csv
+```
+
 
 
 
