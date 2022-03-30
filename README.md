@@ -122,7 +122,92 @@ hdfs dfs -chmod +x runall.sh
 
 # To set replication factor of HDFS(should be used in a cluster where a master and slaves exist)
 hdfs dfs -setrep 4 -R /example/ratings.csv
+
+# Copy file to local
+hdfs dfs - copyToLocal /path/in/hdfs /path/in/local
+
 ```
+
+## Apache Pig
+
+1) Apache is one of the ways to develop Map Reduce in Hadoop. It is processing data in HDFS.
+
+2) We can develop Map Reduce via Java, Python, Scala, Apache Pig and Apache Hive. However, Apache Pig and Apache Hive are preferred.
+
+3) Apache Pig is developed in Pig Latin language.
+
+4) Pig file extension is `.pig`.
+
+5) Some Apache Pig script is below:
+
+```
+# Loading data
+First = LOAD '/data/*' USING PigStorage(',') AS
+(
+    userId: int,
+    movieId: int,
+    rating: double,
+    duration: double,
+    date: int,
+    country: chararray
+);
+
+# To print data
+DUMP First;
+
+New_Data = FILTER First BY rating>3.0;
+
+DUMP New_Data;
+
+# Drop duplicate rows
+New_Data2 = DISTINCT New_Data;
+
+DUMP New_Data2;
+
+New_Data3 = GROUP First BY COUNTRY;
+
+DUMP New_Data3;
+
+AVG_DATA = FOREACH New_Data3 {
+    Generate
+    group,
+    AVG(Data.duration) as ortalama;
+}
+
+DUMP AVG_DATA;
+
+-- Inner join
+JOINED_DATA = JOIN Personal BY DEPT_ID, DEPARTMENT BY DEPT_ID BY LEFT_TABLE;
+
+DUMP JOINED_DATA;
+
+--Left Join
+JOINED_DATA = JOIN Personal BY DEPT_ID LEFT OUTER, DEPARTMENT BY DEPT_ID BY LEFT_TABLE;
+
+
+-- Saving
+STORE JOINED_DATA INTO /path/to/hdfs/directory USING PigStorage(',');
+
+```
+
+6) To run pig script,
+
+```
+pig path/to/directory/filename.pig
+```
+
+7) Bind condition(?:) is 'if else' of Apache Pig.
+
+a==3?'dogru':'yanlis'
+
+8) We can make regex operations in Apache Pig.
+
+9) Standard Aggregation functions like max, min, avg is possible in Apache Pig.
+
+
+
+
+
 
 
 
