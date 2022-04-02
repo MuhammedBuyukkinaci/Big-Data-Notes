@@ -299,6 +299,88 @@ db.Persons.find( ad: "isaac newton"} )
 
 23) Using MongoDB is more efficient and easier than using Mysql.
 
+# Elastic Search
+
+1) Elastic Search is a NoSQL technology which is used in text search on big data.
+
+2) If search in your main focus, prefer Elastic Search.
+
+3) ES indexes words at saving phase. Therefore, it is faster.
+
+4) A visualization for Elastic Search is below:
+
+![Elastic Search](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/006/000.png)
+
+![Elastic Search](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/006/001.png)
+
+5) Terminology for Elastic Search
+
+![Elastic Search](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/006/002.png)
+
+6) Elastic Search is also having cluster architecture like other big data technologies.
+
+![Elastic Search](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/006/003.png)
+
+7) Elastic Search keeps its data in JSON format due to the fact that it has a pattern of document based. You can import json file to elastic search directly.
+
+8) POST HTTP verb is more secure in sending credential information like password or credit card info.
+
+9) Elastic Search uses 9200 port
+
+10) To upload a json file to an ES cluster, use PUT HTTP word on Postman and send a Json object (under Body Tab) to `localhost:9200/db_name/table_name/id_of_document` or POST HTTP word and `localhost:9200/db_name/table_name`. We don't have to specify id_of_document in POST HTTP. POST assigns random id to the document.
+
+11) To query an instance in Elastic Search, use GET HTTP word and
+
+```
+localhost:9200/db_name/table_name/id_of_document
+```
+
+12) To get a selected product, use GET HTTP word
+
+```
+localhost:9200/exam/product/126
+```
+
+13) To check a document is in ES or not, use GET HTTP word
+
+```
+localhost:9200/exam/product/126?_source=false
+```
+
+14) To get only selected fields(name and color fields of 126 ID product), use GET HTTP word
+
+```
+localhost:9200/exam/product/126?_source_include=name,color
+```
+
+15) To delete a document from ES, use DELETE HTTP word
+
+```
+localhost:9200/exam/product/126
+```
+
+16) To filter only brand=apple, use GET word
+
+```
+localhost:9200/exam/product/_search?q=brand:name
+```
+
+17) To get all infos on DB,
+
+```
+localhost:9200/_all
+```
+
+18) What we did above in Postman is used in testing. ES should be integrated into a programming language like Java or Python.
+
+19) ES can be used in Maven project in Java. ES should be addedas dependency under pom.xml
+
+20) Check out ES Java and Python API's
+
+21) Data which is sent to ES must be JSON. We can send data to ES via Java or Python. Sending data to ES is called indexing.
+
+22) ES is composed of 5 shards by default.
+
 
 
 
