@@ -204,6 +204,12 @@ a==3?'dogru':'yanlis'
 
 9) Standard Aggregation functions like max, min, avg is possible in Apache Pig.
 
+## Apache Hive
+
+1) Apache Hive is a tool to develop MapReduce on Hadoop environment.
+
+2) We write SQL Queries for Apache Hive.
+
 
 
 
