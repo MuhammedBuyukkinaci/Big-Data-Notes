@@ -210,6 +210,108 @@ a==3?'dogru':'yanlis'
 
 2) We write SQL Queries for Apache Hive.
 
+# MongoDB
+
+1) It is a popular and scalable NoSQL Technology.
+
+2) MongoDB stores data in a format of BinaryJSON, which is similar to JSON.
+
+3) RDBMS vs NoSQL is below:
+
+![RDBMS](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/005/000.png)
+
+4) Different terminologies for RDBMS and NoSQL is below:
+
+![Terminology](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/005/001.png)
+
+5) While inserting a new record to mongoDB, a unique id is created as follows:
+
+![Unique Id](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/005/002.png)
+
+6) After installing MongoDB, open up a MongoDB Server on Terminal 1 and run command in Terminal 2.
+
+7) To create a DB in MongoDB
+
+```
+use DB_NAME_TO_CREATE
+```
+
+8) To list DB's in MongoDB(admin is a default DB coming with installition)
+
+```
+show dbs
+```
+
+9) To show current DB
+
+```
+db
+```
+
+10) To create collection(Table)
+
+```
+db.createCollection("Persons")
+```
+
+11) To show collections on DB,
+
+```
+show collections
+```
+
+12) To insert a document(row) to a collection(table)
+
+```
+db.Persons.insert( {ad: "albert einstein"} )
+db.Persons.insert( {ad: "madam curie"} )
+db.Persons.insert( {ad: "isaac newton"} )
+db.Persons.insert( {ad: "celal sengor"} )
+```
+
+13) To have a look at the collection
+
+```
+db.Persons.find()
+```
+
+14) To filter on mongo db
+
+```
+db.Persons.find( ad: "isaac newton"} )
+```
+
+15) Robomongo(Robo3T) is used in industry instad of CLI we did above. Robo3T is a GUI like pgadmin of postgresql.
+
+16) MongoDB's default port is 27017.
+
+17) We can use MongoDB on Java, Python, C#.
+
+18) Maven is used in Java Enterprise. Maven is a java technology. INstead of adding libraries one by one, we are just adding dependency code to Maven and it will download what is required. We can use Maven to access to mongo db.
+
+19) Java codes are stored under src/main/java in Maven project.
+
+20) pom.xml is our maven config file. We can type what libraries to use under <dependencies> tags
+
+21) All documents(rows) are independent of each other. One document is composed of 50 fields and the other is composed of 3 fields. This makes MongoDB flexible. We don't have to make a relationship of 1 to N, N to N, 1 to 1 etc.
+
+22) We can make CRUD operations on Java for MongoDB.
+
+23) Using MongoDB is more efficient and easier than using Mysql.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
