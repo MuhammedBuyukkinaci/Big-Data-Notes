@@ -447,6 +447,77 @@ kafka-console-consumer.bat --zookeeper localhost:2181 --topic TOPIC_NAME
 
 19) Consumers are listening topcs by *subscribe* keyword in Java. Consumer can listen many topics at the same time.
 
+# Apache Spark
+
+1) Spark was developed in Scala language. It is working on RAM, therefore it is faster than hadoop. Spark has no storage unit.
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/000.png)
+
+2) Spark vs Hadoop
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/001.png)
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/002.png)
+
+3) Spark has a Machine Learning library called **MLLib**. Real time data analysis can be made via **Spark Streaming**. We can make big data analysis via **Spark SQL** .
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/004.png)
+
+4) The opposite of real time analysis is batch analysis. Batch analysis is made in Hadoop nad Real time analysis is made in Spark.
+
+5) Apache Spark is also having a cluster architecture.
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/003.png)
+
+6) Generally, data is stored in hdfs of Hadoop and processed in Spark. Hadoop is advantegous in hdfs and Spark is advantegous in processing.
+
+7) RDD is Resilient Distributed Dataset. RDD is fundamental data structure of Apache Spark.
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/005.png)
+
+8) Apache Spark made a big change in version 1.8. It would be a better practice to use Spark > 1.8. Spark was using Dataframe architecture before 1.8 and now using Dataset architecture after 1.8.
+
+9) Add Spark to Maven repository as dependency in pom.xml.
+
+10) RDD methods are important. Some RDD methods are count, first, last etc.
+
+11) We can import data to RDD via local computer, HDFS or zipped files.
+
+12) RDD operations are 2 types: **transformations** and **actions**. Map and filter are examples of **transformations**. Count and first are examples of **actions**; 
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/006.png)
+
+13) Map method of RDD creates a new RDD.
+
+14) Map, foreach and Filter are 3 most used methods of RDD.
+
+14) Filter method of RDD filters input RDD data and create a new RDD data.
+
+15) flatmap, mappartitions, distinct, sample, Union, Substract are transformation methods for RDD. They are creating a new RDD after transformations.
+
+16) PairRDD is a transformation method that creates key value pairs.
+
+17) Spark SQL is used more than RDD's.
+
+18) Lazy evaluation is creating RDD until seeing action method. It is a concept asked in interviews. There must be an action method at the end of the code.
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/007.png)
+
+19) **collect** is an action method of RDD. It gathrs data from slaves to master.
+
+![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/008.png)
+
+20) **take** is an action method of RDD. It is like head of Python dataframe.
+
+21) We can save RDD's to csv's or hdfs via **saveastextfile** action method.
+
+22) Converting input to RDD's via model is the critical point of Java code.
+
+23) MongoDB has an apache spark integration. Its name is *mongo spark connector*. Use this library in Java as dependency in pom.xml.
+
+24) We can save the result of our analysis into MongoDB. MongoDB accepts data which is in JSON format.
+
+25)
+
 
 
 
