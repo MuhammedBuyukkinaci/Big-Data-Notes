@@ -381,6 +381,73 @@ localhost:9200/_all
 
 22) ES is composed of 5 shards by default.
 
+# Apache Kafka
+
+1) The critical point in big data projects is to collect data fast without failure.
+
+2) We are sending data from source to Apache Kafka, not directly to analysis tools.
+
+3) Apache Kafka has a message-queue architecture(FIFO: first in first out). It is distributed. It is used in real time projects. It is developed in Scala language.
+
+![Apache Kafka](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/007/000.png)
+
+4) Producer and COnsumer architecture exist in Kafka.
+
+![Apache Kafka](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/007/001.png)
+
+5) Kafka cluster is consisting of many computers. One computer is called broker. In each broker, there may be several topics.
+
+![Apache Kafka](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/007/002.png)
+
+6) Kafka is distributed, which means that it can be replicated by a replication factor(below = 3)
+
+![Apache Kafka](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/007/003.png)
+
+7) In order to run Kafka cluster, run Zookeeper first.
+
+8) Zookeeper manages resource management in distributed server architectures. Zookeeper is dealing with configuration and keeping configuration files.
+
+10) Zookeeper and Kafka versions must be compatible.
+
+11) Zookeeper uses 2181 port. Kafka uses 9092.
+
+12) Producer is a Kafka API which is sending data to Kafka Topic. Consumer is a Kafka API which is taking data from Kafka Topic to send it to Hadoop or Spark.
+
+![Apache Kafka](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/007/004.png)
+
+13) To create a topic in Apache Kafka
+
+```
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TOPIC_NAME_TO_USE
+```
+
+14) To list topics in Apache Kafka
+
+```
+ kafka-topics.bat --list --zookeeper localhost:2181
+```
+
+15) To create a producer API in Apache Kafka
+
+```
+kafka-console-producer.bat --broker-list localhost:9092 --topic TOPIC_NAME
+```
+
+16) We can crate a producer API in Java or Python and then send it to Kafka. In most cases, Consumer API and Producer API are created in a programming language and then linked.
+
+![Apache Kafka](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/007/005.png)
+
+17) To create a consumer API in Apache Kafka
+
+```
+kafka-console-consumer.bat --zookeeper localhost:2181 --topic TOPIC_NAME
+```
+
+18) In Java, add kafka dependencies under pom.xml to use in Java
+
+19) Consumers are listening topcs by *subscribe* keyword in Java. Consumer can listen many topics at the same time.
+
+
 
 
 
