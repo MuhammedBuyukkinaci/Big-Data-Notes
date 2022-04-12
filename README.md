@@ -128,6 +128,8 @@ hdfs dfs - copyToLocal /path/in/hdfs /path/in/local
 
 ```
 
+8) HDFS is on port 8020. HDFS on local works on 50070.
+
 ## Apache Pig
 
 1) Apache is one of the ways to develop Map Reduce in Hadoop. It is processing data in HDFS.
@@ -516,7 +518,43 @@ kafka-console-consumer.bat --zookeeper localhost:2181 --topic TOPIC_NAME
 
 24) We can save the result of our analysis into MongoDB. MongoDB accepts data which is in JSON format.
 
-25)
+
+# Spark SQL
+
+1) Spark SQL is providing us with writing sql alike functions in order to make analysis.
+
+2) In order to use Spark SQL in Java, add it to pom.xml as dependency.
+
+3) Spark Core(RDD's and section above) uses Spark Context; Spark SQL uses Spark Session.
+
+4) Spark Core & Spark SQL are compared in academical articles. After version 2.0, Spark SQL outperforms. Before version 2.0, Spark Core outperforms.
+
+5) Spark SQL is easier than RDD's(Spark Core).
+
+6) We can subset columns of raw data via select method `data.select("col1","col2")`. We can also use group by in Spark SQL.
+
+7) We can read nested Json objects in a json file.
+
+8) We can filter data via **filter** method of Dataset in Spark SQL.
+
+9) Spark is inspired from Hadoop. Therefore, Spark is based on Hadoop Common. We should explicit it briefly.
+
+10) We can write SQL queries in Java for Spark Dataset instead of Object Oriented Methods above.
+
+```
+rawdata.createOrReplaceTempView("person");
+
+sparkSession.sql("SELECT * FROM person")
+```
+
+11) Tempview disappears if spark session is closed and even if spark cluster is running. Therefore, use createOrReplaceGlobalTempView. It is useful in teams collaborating with each other.
+
+12) Encoder in Spark means converting json file which is read to a model defined in a Java class.
+
+13) We store data in Hadoop HDFS and process it in Spark and then send processed data to Hadoop HDFS. Other possible scenarios: Read from HDFS and writes on NoSQL or read from Kafka and writes on HDFS
+
+
+
 
 
 
