@@ -604,33 +604,14 @@ sparkSession.sql("SELECT * FROM person")
 
 ![Window Streaming](./images/010/003.png)
 
+# Apache Kafka - Spark Streaming Integration
 
+1) An example of Kafka and Spark Streaming is below:
 
+![Integration](./images/011/000.png)
 
+2) We can produce and send data to Kafka via Python and consume data in Kafka via Java using libraries
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+3) To convert data into Json in Kafka Producer, use gson package of Google in pom.xml.
 
 
