@@ -553,6 +553,61 @@ sparkSession.sql("SELECT * FROM person")
 
 13) We store data in Hadoop HDFS and process it in Spark and then send processed data to Hadoop HDFS. Other possible scenarios: Read from HDFS and writes on NoSQL or read from Kafka and writes on HDFS
 
+# Real Time Streaming
+
+1) Batch Processing vs Real Time Processing
+
+![Batch Processing](./images/010/000.png)
+
+2) Batch processing is making analysis on a stationary data.
+
+3) Following new born babies via sensors, self driving cars, Amazon go, Google Ads are examples of Real time processing.
+
+4) Some Real Time Streaming technologies are below
+
+- Spark Streaming: A sub project of Spark
+
+- Flink: Similar to Spark Streaming. Used a lot before Spark 2.2.
+
+- Apache: Not used a lot now but it is basis of Spark Streaming and Flink.
+
+- Amazon Kinesis: A product of Amazon. It is an enterprise service. No coding. Drap and drop via GUI's.
+
+
+5) All of above technologies(Spark Streaming, Amazon Kinesis etc.) can be developed via Scala, Python or Java.
+
+6) Spark Streaming is a library running on Spark Engine
+
+![Spark Streaming](./images/010/001.png)
+
+7) Spark Streaming splits data into batches and these batches were fed into Spark Engine. Batches of processed data on Spark Engine are final outputs.
+
+![Spark Streaming](./images/010/002.png)
+
+8) [Netcat](https://tr.wikipedia.org/wiki/Netcat) is a messaging app whose data can be processed in real time analysis.
+
+9) We can use data by listening a port or reading from hdfs or reading from Apache Kafka etc in order to use in Spark Streaming.
+
+10) IoT sensor data can be processed in Spark Streaming in a real-time manner.
+
+11) Complete mode takes all data and make analysis. Update mode takes only recent data and make analysis.
+
+12) Real time analysis have 2 types:
+
+- Original Stream: Immediately processing data.
+
+- Windowed (Time) Stream: Partitioning data into some time frames and then make analysis.
+
+13) Original data don't have timestamp value and stream adds it.
+
+13) An example of Windowed Stream is below:
+
+![Window Streaming](./images/010/003.png)
+
+
+
+
+
 
 
 
