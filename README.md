@@ -462,6 +462,9 @@ kafka-console-consumer.bat --zookeeper localhost:2181 --topic TOPIC_NAME
 
 3) Spark has a Machine Learning library called **MLLib**. Real time data analysis can be made via **Spark Streaming**. We can make big data analysis via **Spark SQL** .
 
+![Spark Score](./images/012/001.png)
+
+
 ![Apache Spark](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/008/004.png)
 
 4) The opposite of real time analysis is batch analysis. Batch analysis is made in Hadoop nad Real time analysis is made in Spark.
@@ -613,5 +616,30 @@ sparkSession.sql("SELECT * FROM person")
 2) We can produce and send data to Kafka via Python and consume data in Kafka via Java using libraries
 
 3) To convert data into Json in Kafka Producer, use gson package of Google in pom.xml.
+
+
+# MLLIB
+
+1) Google cloud uses uploaded data to its systems. Therefore, it is super good.
+
+2) ML lifecycle is below:
+
+![ML](./images/012/000.png)
+
+3) MLLIB is scalable. We can add machines to cluster or subbtract machines from cluster.
+
+4) MLLIB can be coded in Python, Java, R and Scala etc.
+
+5) MLLIB is released after Spark 0.8
+
+6) Mahout is an alternative to MLLIB. Mahout is outdated and not developed any more.
+
+![ML](./images/012/002.png)
+
+7) Apache Spark usage example is below
+
+![ML](./images/012/003.png)
+
+8) Linear Regression, Naive Bayes, Decision Trees and Random Forest are available in Spark MLLIB.
 
 
