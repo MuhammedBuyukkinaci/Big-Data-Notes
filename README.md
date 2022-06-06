@@ -212,6 +212,8 @@ a==3?'dogru':'yanlis'
 
 2) We write SQL Queries for Apache Hive.
 
+3) Don't run COUNT and WHERE operations on Apache Hive, which grabs data from Hadoop.
+
 # MongoDB
 
 1) It is a popular and scalable NoSQL Technology.
