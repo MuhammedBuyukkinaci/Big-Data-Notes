@@ -57,6 +57,8 @@ Data Generation Speed * Number of Engines * Total second of flight
 
 ![NoSQL](https://github.com/MuhammedBuyukkinaci/Big-Data-Notes/blob/master/images/001/003.jpeg)
 
+12) When we set up a noqsl database, writing operation will be carried out via master node and reading operation will be carried out slave nodes generally.
+
 ## Hadoop
 
 1) Hadoop is a java library which enables us to make parallel operations of big data(PB, EB) on multiple machines 
