@@ -646,4 +646,6 @@ sparkSession.sql("SELECT * FROM person")
 
 8) Linear Regression, Naive Bayes, Decision Trees and Random Forest are available in Spark MLLIB.
 
+## Other notes
 
+1) Apache Flume is a technology in order to move log or event data(web server logs, application logs, social media feeds) from Kafka to HDFS. It can be installed with Helm. Data can be transferred after accumulating in Kafka based on some criteria such as each 10 minutes, reaching to a limit of 1000 etc.
