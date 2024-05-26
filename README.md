@@ -453,6 +453,12 @@ kafka-console-consumer.bat --zookeeper localhost:2181 --topic TOPIC_NAME
 
 19) Consumers are listening topcs by *subscribe* keyword in Java. Consumer can listen many topics at the same time.
 
+20) Data in the format of JSON, Avro, Text and Binary can be stored in Apache Kafka.
+
+21) One Kafka topic can have many partitions. Data in a partition is ordered. The ID of data in a partition is called offset and it is incrementing continuously. Data in kafka is immutable. When a record is written to a Kafka topic, it can't be modified. Data in Kafka will disappear after one week unless it is configured. Data is randomly assigned to a partition unless you provide a key.
+
+![](./images/007/006.png)
+
 # Apache Spark
 
 1) Spark was developed in Scala language. It is working on RAM, therefore it is faster than hadoop. Spark has no storage unit.
@@ -649,3 +655,7 @@ sparkSession.sql("SELECT * FROM person")
 ## Other notes
 
 1) Apache Flume is a technology in order to move log or event data(web server logs, application logs, social media feeds) from Kafka to HDFS. It can be installed with Helm. Data can be transferred after accumulating in Kafka based on some criteria such as each 10 minutes, reaching to a limit of 1000 etc.
+
+2) Debezium is a CDC tool. When a change happens in a table of a database, Debezium can listen this and send the changes to a kafka topic.
+
+3) 
