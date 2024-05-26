@@ -216,6 +216,8 @@ a==3?'dogru':'yanlis'
 
 3) Don't run COUNT and WHERE operations on Apache Hive, which grabs data from Hadoop.
 
+4) Apache Hive creates a data warehouse layer on top of HDFS, enabling SQL-like querying of the data.
+
 # MongoDB
 
 1) It is a popular and scalable NoSQL Technology.
@@ -658,4 +660,5 @@ sparkSession.sql("SELECT * FROM person")
 
 2) Debezium is a CDC tool. When a change happens in a table of a database, Debezium can listen this and send the changes to a kafka topic.
 
-3) 
+3) Apache Sqoop can be used to import data from Relational Databases to HDFS.
+
