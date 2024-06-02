@@ -662,3 +662,11 @@ sparkSession.sql("SELECT * FROM person")
 
 3) Apache Sqoop can be used to import data from Relational Databases to HDFS.
 
+4) TigerBeetle is an open source database which handles financial transactions with a focus on speed, reliability and correctness.
+
+5) If you prefer to store your data in the format of pure binary encoding instead of RDBMS or NoSQL, don't forget to add a version flag in the binary encoded data.
+
+![ML](./images/012/004.png)
+
+
+
