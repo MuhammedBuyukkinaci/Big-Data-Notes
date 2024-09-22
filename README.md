@@ -668,5 +668,20 @@ sparkSession.sql("SELECT * FROM person")
 
 ![ML](./images/012/004.png)
 
+6) A CDC like can listen changes on an RDBMS and update a NoSQL DB. Then, a connector for this NoSQL DB can push changes occured on the NoSQL DB to Apache Kafka. Apache Kafka can be consumed by S3 Sink connector to push changes to AWS or Apache Flume to push changes to HDFS.
 
+          RDBMS- PostgreSQL
+            | (CDC Listener, Debezium) 
+            v
+        NoSQL Database - MongoDB
+            | (NoSQL Connector, MongoDB Conector to Kafka)
+            v
+        Apache Kafka
+        /       \
+        v         v
+        S3 Sink   Apache Flume
+        Connector   Connector
+        |           |
+        v           v
+        AWS         HDFS
 
