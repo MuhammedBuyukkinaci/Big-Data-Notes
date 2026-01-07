@@ -685,3 +685,15 @@ sparkSession.sql("SELECT * FROM person")
         v           v
         AWS         HDFS
 
+7) Apache Spark was created by Google. Kafka was created by Linkedin
+
+8) PostgreSQL can be used instead of Apache Kafka. PostgreSQL can be used instead of Redis & RabbitMQ as a pub-sub. PostgreSQL can be used to store NoSQL alike data in the format of JSON and JSONB(which is faster). You can query a table with respect to its JSON/JSONB column. PostgreSQL can be used as a vector store. Citus is a PostgreSQL extension that introduces sharding, which is splitting data among servers. All of the above specifications fit for small to mid size data.
+
+9) You can run SQL like query on Couchbase as below:
+
+```sql
+-- Returning a single document
+SELECT * FROM `bucket_name` WHERE META().id =  "string_here"
+-- Returning multiple documents
+SELECT field_name FROM `bucket_name` WHERE "query_string" in array_field;
+```
